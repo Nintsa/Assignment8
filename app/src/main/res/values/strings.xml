@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Assignment8</string>
+    <string name="add_new_user">Add New User</string>
+    <string name="name">Name</string>
+    <string name="surname">Surname</string>
+    <string name="email">Email</string>
+    <string name="delete">Delete</string>
+    <string name="change">Change</string>
+    <string name="update">Update</string>
+</resources>
