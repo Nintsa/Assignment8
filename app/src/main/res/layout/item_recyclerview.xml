@@ -2,7 +2,9 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="70dp">
+    android:layout_height="80dp"
+    android:background="@drawable/item_background"
+    android:layout_marginTop="10dp">
 
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -10,6 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
         android:text="@string/name"
         android:textSize="16dp"
         android:textStyle="bold"
@@ -20,7 +23,8 @@
         android:id="@+id/tvSurname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
         android:text="@string/surname"
         android:textSize="16dp"
         android:textStyle="bold"
@@ -29,8 +33,8 @@
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvMail"
-        android:layout_width="50dp"
-        android:layout_height="48sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
         android:inputType="textEmailAddress"
@@ -38,52 +42,52 @@
         android:textSize="16dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvName" />
+        app:layout_constraintTop_toBottomOf="@id/tvName"
+        android:minHeight="48dp"
+        android:minWidth="50dp" />
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:layout_width="100dp"
-        android:layout_height="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/item_background"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="20dp"
         android:id="@+id/btnDelete"
-        android:contentDescription="Deletes User"
-        />
-    
-    <androidx.appcompat.widget.AppCompatTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tvDelete"
-        app:layout_constraintStart_toStartOf="@id/btnDelete"
-        app:layout_constraintEnd_toEndOf="@id/btnDelete"
-        app:layout_constraintTop_toTopOf="@id/btnDelete"
-        app:layout_constraintBottom_toBottomOf="@id/btnDelete"
-        android:text="@string/delete"
-        />
-
-    <androidx.appcompat.widget.AppCompatImageView
         android:layout_width="100dp"
-        android:layout_height="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnDelete"
-        android:src="@drawable/item_background"
+        android:layout_height="30dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="20dp"
-        android:id="@+id/btnUpdate"
-        android:contentDescription="Updates Existing User"
-        />
+        android:clickable="true"
+        android:contentDescription="Deletes User"
+        android:src="@drawable/btn_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvDelete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/delete"
+        app:layout_constraintBottom_toBottomOf="@id/btnDelete"
+        app:layout_constraintEnd_toEndOf="@id/btnDelete"
+        app:layout_constraintStart_toStartOf="@id/btnDelete"
+        app:layout_constraintTop_toTopOf="@id/btnDelete" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/btnUpdate"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:clickable="true"
+        android:contentDescription="Updates Existing User"
+        android:src="@drawable/btn_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnDelete" />
+
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvUpdate"
-        app:layout_constraintStart_toStartOf="@id/btnUpdate"
-        app:layout_constraintEnd_toEndOf="@id/btnUpdate"
-        app:layout_constraintTop_toTopOf="@id/btnUpdate"
-        app:layout_constraintBottom_toBottomOf="@id/btnUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="@string/update"
-        />
+        app:layout_constraintBottom_toBottomOf="@id/btnUpdate"
+        app:layout_constraintEnd_toEndOf="@id/btnUpdate"
+        app:layout_constraintStart_toStartOf="@id/btnUpdate"
+        app:layout_constraintTop_toTopOf="@id/btnUpdate" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

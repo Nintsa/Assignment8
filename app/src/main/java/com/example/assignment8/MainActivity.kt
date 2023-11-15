@@ -1,5 +1,6 @@
 package com.example.assignment8
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.inputmethod.InputBinding
@@ -31,9 +32,28 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         fillUserList()
+        btnActions()
+
         binding.recycler.layoutManager = LinearLayoutManager(this)
         binding.recycler.adapter = UsersAdapter(Users = Users)
+
+
     }
+
+    fun btnActions(){
+        addBtnAction()
+        updateBtnAction()
+        deleteBtnAction()
+    }
+
+    fun addBtnAction(){
+        binding.btnAdd.setOnClickListener {
+            val intentAddBtn = Intent(this, UserActivity::class.java)
+            startActivity(intentAddBtn)
+        }
+    }
+
+
 
     private fun fillUserList() {
         Users.also {
